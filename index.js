@@ -7,8 +7,9 @@
  */
 function convertToCelsius(f) {
   // TODO
+  return ((f - 32) * 5) / 9;
 }
-//New
+
 /**
  * | Temperature | Description |
  * | ----------- | ----------- |
@@ -24,14 +25,27 @@ function convertToCelsius(f) {
  */
 function describeTemperature(f) {
   // TODO
+  let message = "";
+  if (f <= 32) {
+    message = "very cold";
+  } else if (f > 32 && f <= 64) {
+    message = "cold";
+  } else if (f > 64 && f <= 86) {
+    message = "warm";
+  } else if (f > 86 && f < 100) {
+    message = "hot";
+  } else if (f >= 100) {
+    message = "very hot";
+  }
+  return message;
 }
-
 /**
  * @param {number} limit
  * @returns {number} a random integer in the range [0, `limit`)
  */
 function getRandomInt(limit) {
   // TODO
+  return Math.round(Math.random() * 100);
 }
 
 // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
